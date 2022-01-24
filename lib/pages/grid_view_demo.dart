@@ -63,6 +63,7 @@ class GridViewDemo extends StatelessWidget {
                 // color: Colors.orange,
               ),
               Container(
+                decoration: BoxDecoration(borderRadius: BorderRadius.circular(15),color: Colors.red),
                 padding: EdgeInsets.all(8),
                 child: Center(
                   child: MyCard(
@@ -71,7 +72,19 @@ class GridViewDemo extends StatelessWidget {
                     icon: Icons.api,
                   ),
                 ),
-                color: Colors.red,
+                // color: Colors.red,
+              ),
+              Container(
+                decoration: BoxDecoration(borderRadius: BorderRadius.circular(25),color: Colors.blueGrey),
+                padding: EdgeInsets.all(8),
+                child: Center(
+                  child: MyCard(
+                    title: 'Flutter',
+                    subTitle: 'Version 2.8',
+                    icon: Icons.api,
+                  ),
+                ),
+                // color: Colors.red,
               ),
             ],
           ),
