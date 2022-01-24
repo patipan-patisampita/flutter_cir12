@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget{
     return MaterialApp(
       title: 'Flutter App',
       home: RowColumnDemo(),
+      theme: ThemeData(primarySwatch: Colors.grey),
     );
   }
 }
