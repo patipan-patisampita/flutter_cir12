@@ -41,10 +41,20 @@ class GridViewDynamic extends StatelessWidget {
                   color: Colors.purple,
                   borderRadius: BorderRadius.all(Radius.circular(20)),
                 ),
-                child: MyCard(
-                  title: model.title,
-                  subTitle: model.subTitle,
-                  icon: model.icon,
+                padding: EdgeInsets.all(8),
+                child: Material(
+                  color: Colors.transparent,
+                  child: InkWell(
+                    borderRadius: BorderRadius.all(Radius.circular(20)),
+                    onTap: () {
+                      print(model.title);
+                    },
+                    child: MyCard(
+                      title: model.title,
+                      subTitle: model.subTitle,
+                      icon: model.icon,
+                    ),
+                  ),
                 ),
               );
             }),
