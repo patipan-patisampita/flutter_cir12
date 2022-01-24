@@ -18,7 +18,11 @@ class RowColumnDemo extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              MyCard(),
+              MyCard(
+                title: 'Flutter',
+                subTitle: 'Version 2.8',
+                icon: Icons.home,
+              ),
               SizedBox(width: 12),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -58,17 +62,22 @@ class RowColumnDemo extends StatelessWidget {
 }
 
 class MyCard extends StatelessWidget {
-  const MyCard({Key? key}) : super(key: key);
+  final String? title;
+  final String? subTitle;
+  final IconData? icon;
+
+  const MyCard({Key? key, this.title, this.subTitle, this.icon})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Icon(Icons.account_balance, color: Colors.white),
+        Icon(icon, color: Colors.white),
         SizedBox(height: 6),
-        Text('Cats', style: TextStyle(color: Colors.white)),
-        Text('Korat', style: TextStyle(color: Colors.white)),
+        Text(title!, style: TextStyle(color: Colors.white)),
+        Text(subTitle!, style: TextStyle(color: Colors.white)),
       ],
     );
   }
