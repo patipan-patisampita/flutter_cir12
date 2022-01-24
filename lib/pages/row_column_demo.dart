@@ -18,15 +18,7 @@ class RowColumnDemo extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(Icons.account_balance, color: Colors.white),
-                  SizedBox(height: 6),
-                  Text('Cats', style: TextStyle(color: Colors.white)),
-                  Text('Korat', style: TextStyle(color: Colors.white)),
-                ],
-              ),
+              MyCard(),
               SizedBox(width: 12),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -61,6 +53,23 @@ class RowColumnDemo extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+class MyCard extends StatelessWidget {
+  const MyCard({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Icon(Icons.account_balance, color: Colors.white),
+        SizedBox(height: 6),
+        Text('Cats', style: TextStyle(color: Colors.white)),
+        Text('Korat', style: TextStyle(color: Colors.white)),
+      ],
     );
   }
 }
